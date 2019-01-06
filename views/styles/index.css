@@ -9,26 +9,133 @@
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: black;
-font-family:;
+    background-color: #211f1d;
+    font-family:;
 }
 .logo{
     color:#ffff;
     font-size:22px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
     }
 
     .nav-links{
         display:flex;
-        justify-content:space-around;
-        width:80%;   
-    }
-    .nav-links li{
-        list-style:none;
-    }
+         justify-content:space-between;
+         width:100%;
+     }
+     .nav-links li{
+         list-style:none;
+         width:0%;
+     }
     .nav-links a{
         text-decoration:none;
         letter-spacing: 3px;
         font-weight:bold;
         font-size:;
-        color:#fff;
+        font-family: 'Poppins', sans-serif;
+        color:#ffff;
+    }
+    .nav-links a:hover{
+        color:#2b8221;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .hamburger div{
+        width: 25px;
+        height: 5px;
+        background-color: #fff;
+        margin: 5px;
+    }
+
+    .slantedDiv{
+        position: relative;
+        background: url('../images/hm1.jpg') no-repeat;
+        background-size: cover;
+        overflow:;
+        /* background: yellow; */
+
+        width: 100%;
+        height: 500px;
+        /* padding: 30px;
+        margin-bottom: 100px; */
+    }
+    .slantedDiv:after{
+        position: absolute;
+        content: '';
+        background: inherit;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;;
+        bottom: 0;
+        height: 100%;
+        transform-origin: top left;
+        transform: skewY(8deg);
+        z-index: -5;
+    }
+
+    .slantedDiv p{
+        color: #ffff;
+        width: 100%;
+        font-size: 55px;
+        text-align: center;
+        /* margin-left: 100px; */
+        padding: 120px;
+    }
+
+    .slantedDiv2{
+        padding:;
+        width: 100%;
+        padding: 180px;
+        /* padding: 30px;
+        margin-bottom: 100px; */
+    }
+    .slantedDiv2 p{
+        width: 100%;
+        font-size: 55px;
+
+    }
+    .slantedDiv2 .green{
+        color: green;
+
+    }
+    
+
+    @media screen and (max-width:1024px){
+        .nav-links{
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        body{
+            overflow: hidden;
+        }
+        .nav-links{
+            position: absolute;
+            right: 0px;
+            height: 92vh;
+            top: 6vh;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+        .nav-links li{
+            /* opacity: 0; */
+        }
+        .hamburger{
+            display: block;
+        }
+    }
+
+    .nav-active{
+        transform: translateX(0%);
     }
