@@ -103,6 +103,39 @@
         color: green;
 
     }
+
+    footer{
+        background:#211f1d;
+        padding: 30px 0;
+        border-top: 10px solid #ffff;
+    }
+
+    footer h4{
+        margin:0;
+        text-decoration: none;
+        font-size: 20px;
+        color: #ffff;
+    }
+    footer ul li{
+        color: #ffff;
+        text-decoration: none;
+        width: 80%;
+        margin: 20px 0;
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+    footer ul{
+        float: left;
+        list-style: none;
+        width:15%;
+        margin-left: 180px;
+    }
+    footer:after{
+        content: "";
+        display: block;
+        clear:both;
+    }
+    
     
 
     @media screen and (max-width:1024px){
