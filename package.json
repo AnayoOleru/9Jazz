@@ -1,0 +1,22 @@
+{
+  "name": "9jazz",
+  "version": "1.0.0",
+  "description": "Streaming service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnayoOleru/9Jazz.git"
+  },
+  "keywords": [
+    "Music"
+  ],
+  "author": "Anayo Oleru",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnayoOleru/9Jazz/issues"
+  },
+  "homepage": "https://github.com/AnayoOleru/9Jazz#readme"
+}
