@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/AnayoOleru/9Jazz/issues"
   },
-  "homepage": "https://github.com/AnayoOleru/9Jazz#readme"
+  "homepage": "https://github.com/AnayoOleru/9Jazz#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.2.3",
+    "babel-core": "^6.26.3"
+  }
 }
