@@ -4,6 +4,8 @@
   "description": "Streaming service",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
+    "build": "babel index.js --out-dir build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +23,8 @@
   "homepage": "https://github.com/AnayoOleru/9Jazz#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.2.3",
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
     "express": "^4.16.4"
