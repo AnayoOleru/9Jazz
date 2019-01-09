@@ -8,7 +8,7 @@
     "db-UserCreate": "node ./db.js createTables",
     "db-UserDelete": "node ./db.js dropTables",
     "build": "babel index.js --out-dir build",
-    "test": "mocha"
+    "test": "mocha --exit"
   },
   "repository": {
     "type": "git",
