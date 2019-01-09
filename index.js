@@ -14,8 +14,10 @@ app.get('/api/v1', (req, res) => res.status(200).send({
     status: 'connection successful',
     message: 'Welcome to 9JAZZ',
   }));
-
+// user can be able to register
 app.post('/api/v1/users', User.create);
+// user can login 
+app.post('/api/v1/users/login', User.login);
 
 // listen for request
 app.listen(process.env.port || 2000, function(){
