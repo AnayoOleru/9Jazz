@@ -21,6 +21,7 @@ const createTables = () => {
         id UUID PRIMARY KEY,
         name VARCHAR(128) NOT NULL,
         email VARCHAR(128) NOT NULL,
+        password VARCHAR(120) NOT NULL,
         created_date TIMESTAMP,
         modified_date TIMESTAMP
       )`;
@@ -40,7 +41,7 @@ const createTables = () => {
  * Drop Tables
  */
 const dropTables = () => {
-  const queryText = 'DROP TABLE IF EXISTS reflections';
+  const queryText = 'DROP TABLE IF EXISTS users';
   pool.query(queryText)
     .then((res) => {
       console.log(res);
