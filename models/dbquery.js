@@ -1,6 +1,6 @@
-// src/usingDB/models/index.js
-import { Pool } from 'pg';
-import dotenv from 'dotenv';
+// src/usingDB/models/index.
+const { Pool } = require('pg');
+const dotenv = require('dotenv');
 
 dotenv.config();
 
@@ -8,7 +8,7 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL
 });
 
-export default {
+module.exports = {
   /**
    * DB Query
    * @param {object} req

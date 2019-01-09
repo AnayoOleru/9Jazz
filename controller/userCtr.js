@@ -1,7 +1,7 @@
-import moment from 'moment';
-import uuidv4 from 'uuid/v4';
-import db from '../db';
-import Helper from './Helper';
+const moment = require('moment');
+const uuidv4 = require('uuid/v4');
+const db = require('../models/dbquery');
+const Helper = require('../Helper/Helper');
 
 const User = {
   /**
@@ -20,11 +20,12 @@ const User = {
     const hashPassword = Helper.hashPassword(req.body.password);
 
     const createQuery = `INSERT INTO
-      users(id, email, password, created_date, modified_date)
-      VALUES($1, $2, $3, $4, $5)
+      users(id, name, email, password, created_date, modified_date)
+      VALUES($1, $2, $3, $4, $5, $6)
       returning *`;
     const values = [
       uuidv4(),
+      req.body.name,
       req.body.email,
       hashPassword,
       moment(new Date()),
@@ -36,9 +37,13 @@ const User = {
       const token = Helper.generateToken(rows[0].id);
       return res.status(201).send({ token });
     } catch(error) {
+        console.log(error);
       if (error.routine === '_bt_check_unique') {
         return res.status(400).send({ 'message': 'User with that EMAIL already exist' })
       }
       return res.status(400).send(error);
     }
-  },
+  }
+}
+
+module.exports = User;
