@@ -20,6 +20,9 @@ app.post('/api/v1/users', User.create);
 // user can login 
 app.post('/api/v1/users/login', User.login);
 
+app.get('*', (req, res) => res.status(200).send({message: 'please make use of the right routes'}
+));
+
 // listen for request
 app.listen(process.env.port || 2000, function(){
     console.log('yes, I am now listening for request');
