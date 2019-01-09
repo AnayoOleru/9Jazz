@@ -11,7 +11,7 @@ const User = {
    * @returns {object} reflection object 
    */
   async create(req, res) {
-    if (!req.body.email || !req.body.password) {
+    if (!req.body.name || !req.body.email || !req.body.password) {
       return res.status(400).send({'message': 'Some values are missing'});
     }
     if (!Helper.isValidEmail(req.body.email)) {
