@@ -24,7 +24,7 @@ app.get('*', (req, res) => res.status(200).send({message: 'please make use of th
 ));
 
 // listen for request
-app.listen(process.env.port || 2000, function(){
+app.listen(process.env.PORT || 2000, function(){
     console.log('yes, I am now listening for request');
 })
 
