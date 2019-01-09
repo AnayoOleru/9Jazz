@@ -4,7 +4,7 @@
   "description": "Streaming service",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "db-UserCreate": "node ./db.js createTables",
     "db-UserDelete": "node ./db.js dropTables",
     "build": "babel index.js --out-dir build",
