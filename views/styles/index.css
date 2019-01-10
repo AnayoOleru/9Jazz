@@ -142,6 +142,11 @@
         .nav-links{
             width: 60%;
         }
+        .slantedDiv p{
+           
+            font-size: 30px;
+            
+        }
     }
 
     @media screen and (max-width: 768px){
@@ -166,6 +171,22 @@
         }
         .hamburger{
             display: block;
+        }
+        .slantedDiv p{
+           
+            font-size: 40px;
+            
+        }
+        .slantedDiv2 p{
+            
+            font-size: 30px;
+    
+        }
+        .slantedDiv2{
+            
+            padding: 90px;
+            /* padding: 30px;
+            margin-bottom: 100px; */
         }
     }
 
